@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111318"><meta name="description" content="Your personal routine, fitness and wellbeing tracker">
+<link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css">
+<title>Myself</title>
+</head>
+<body>
+<header><div><p class="eyebrow">YOUR PERSONAL ROUTINE</p><h1>Myself<span>.</span></h1></div><div class="date" id="todayLabel"></div></header>
+<main>
+<section class="hero card"><div><p class="eyebrow">TODAY, NOT PERFECT</p><h2>Small steps count.</h2><p id="welcome">Let's make today manageable.</p></div><div class="ring" id="progressRing"><strong id="progressPct">0%</strong><small>done</small></div></section>
+<section class="card" id="checkinCard"><div class="section-head"><h2>Morning check-in</h2><span class="pill">8:30 AM</span></div><p class="muted">When you open Myself, check in with how you're doing.</p>
+<label>How did you sleep?<select id="sleep"><option value="">Choose one</option><option>Great</option><option>Okay</option><option>Poor</option><option>Barely slept</option></select></label>
+<label>How are you feeling?<select id="mood"><option value="">Choose one</option><option>Good</option><option>Alright</option><option>Low</option><option>Overwhelmed</option></select></label>
+<fieldset><legend>What's on today?</legend><div class="chips"><label><input type="checkbox" value="uni" class="todayType"> University</label><label><input type="checkbox" value="work" class="todayType"> Work</label><label><input type="checkbox" value="gym" class="todayType"> Gym</label><label><input type="checkbox" value="appointments" class="todayType"> Appointments</label><label><input type="checkbox" value="free" class="todayType"> Free day</label></div></fieldset>
+<button id="saveCheckin">Save check-in & build my day</button><p class="tiny muted" id="checkinStatus"></p></section>
+<section class="card"><div class="section-head"><h2>Today's checklist</h2><span class="pill" id="taskCount">0 tasks</span></div><p class="muted">Nothing is marked done automatically. Be honest with yourself, not harsh on yourself.</p><div id="tasks"></div></section>
+<section class="card"><div class="section-head"><h2>This week's routine</h2><span class="pill">Mon–Sun</span></div><p class="muted">A flexible starter schedule. Your Year 2 timetable can be imported once we've mapped its entries.</p><div id="weekPlan"></div></section>
+<section class="card"><div class="section-head"><h2>Progress</h2><span class="pill">Weekly</span></div><div class="stats"><div><small>Current weight (kg)</small><input id="weightInput" type="number" inputmode="decimal" placeholder="e.g. 100" step="0.1"><button class="secondary" id="saveWeight">Save weight</button></div><div><small>Tasks completed</small><strong id="weeklyDone">0</strong></div><div><small>Gym visits</small><strong id="gymCount">0</strong></div></div><canvas id="weightChart" width="600" height="240" aria-label="Weight progress graph"></canvas><p class="tiny muted">Add a weight entry when you choose to weigh yourself. Trends matter more than day-to-day changes.</p></section>
+<section class="card"><div class="section-head"><h2>Import your rota</h2><span class="pill">Weekly</span></div><p class="muted">Upload a screenshot of your Co-op rota. For this starter version, add the shifts manually below; we'll add image-reading/import next.</p><label>Shift date<input id="shiftDate" type="date"></label><label>Start time<input id="shiftStart" type="time"></label><label>Finish time<input id="shiftEnd" type="time"></label><button id="addShift">Add work shift</button><div id="shifts"></div></section>
+<section class="card"><h2>Quick meal ideas</h2><div class="meal"><strong>Breakfast</strong><span>Greek yoghurt, banana and oats</span></div><div class="meal"><strong>Lunch</strong><span>Chicken wrap or sandwich</span></div><div class="meal"><strong>Dinner</strong><span>Microwave rice, chicken and frozen veg</span></div><p class="tiny muted">Simple options, not strict rules. Adjust to your appetite and preferences.</p></section>
+<footer>Made for your real life. A missed task is information, not failure.</footer>
+</main><script src="app.js"></script></body></html>
